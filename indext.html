@@ -12,6 +12,8 @@
     <!-- <script defer src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" 
     integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA==" 
     crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    <script src="https://rawgit.com/sitepoint-editors/jsqrcode/master/src/qr_packed.js"></script>
+
     
 </head>
 <body>
@@ -23,6 +25,22 @@
         <div class="input-form">
           <input type="text" class="qr-input" placeholder="Enter url or text">
           <button class="generate-btn">Generate QR Code</button>
+
+
+          <div>
+            <a id="btn-scan-qr">
+              <button>Scan QR</button>
+              <a/>
+      
+            <canvas hidden="" id="qr-canvas"></canvas>
+      
+            <div id="qr-result" hidden="">
+              <b>Data:</b> <span id="outputData"></span>
+            </div>
+          </div>
+
+
+          
         </div>
         <div class="qr-code">
           <img src="/img/qrcode.png" class="qr-image">
